@@ -1,0 +1,1 @@
+alert('Você não está autorizado!')

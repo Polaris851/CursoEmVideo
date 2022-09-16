@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistemas de Multas</h1>
+    Velocidade do carro: <input type="number" name="km" id="km"> Km/h <br>
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        var teste = document.getElementById('km');
+        function verificar() {
+            var kmh = Number(teste.value);
+            if (kmh > 60) {
+                res.innerHTML = `<p>Sua velocidade é de ${kmh}km/h, então vc irá ser multado</p>`;
+                res.style.background = 'red';
+                res.style.color = 'white';
+            }
+            res.innerHTML += `Use sempre o cinto de segurança!`;
+        }
+    </script>
+</body>
+</html>
